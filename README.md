@@ -1,2 +1,2 @@
 # JYLabelsSelect
-![image](https://github.com/CodingEverydayForFuture/JYPieChart/blob/master/1504674537230.jpg)
+![image](https://github.com/CodingEverydayForFuture/JYLabelsSelect/blob/master/1504755185547.jpg)
