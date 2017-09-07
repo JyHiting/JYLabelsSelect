@@ -14,7 +14,7 @@
 		EF7919791F5FC5EA00650BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7919781F5FC5EA00650BB4 /* Assets.xcassets */; };
 		EF79197C1F5FC5EA00650BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF79197A1F5FC5EA00650BB4 /* LaunchScreen.storyboard */; };
 		EF7919861F5FCED500650BB4 /* JYLabelsSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7919851F5FCED500650BB4 /* JYLabelsSelect.m */; };
-		EF79198A1F6017C900650BB4 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7919891F6017C900650BB4 /* UILabel+SizeToFit.m */; };
+		EF79198E1F60F55000650BB4 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = EF79198D1F60F55000650BB4 /* UILabel+SizeToFit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		EF79197D1F5FC5EA00650BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7919841F5FCED500650BB4 /* JYLabelsSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLabelsSelect.h; sourceTree = "<group>"; };
 		EF7919851F5FCED500650BB4 /* JYLabelsSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLabelsSelect.m; sourceTree = "<group>"; };
-		EF7919881F6017C900650BB4 /* UILabel+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeToFit.h"; sourceTree = "<group>"; };
-		EF7919891F6017C900650BB4 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
+		EF79198C1F60F55000650BB4 /* UILabel+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeToFit.h"; sourceTree = "<group>"; };
+		EF79198D1F60F55000650BB4 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,6 @@
 		EF79196B1F5FC5EA00650BB4 /* JYLabelsSelect */ = {
 			isa = PBXGroup;
 			children = (
-				EF7919871F6017C900650BB4 /* tool */,
 				EF7919831F5FCED500650BB4 /* LabelsSelect */,
 				EF79196F1F5FC5EA00650BB4 /* AppDelegate.h */,
 				EF7919701F5FC5EA00650BB4 /* AppDelegate.m */,
@@ -90,17 +89,18 @@
 		EF7919831F5FCED500650BB4 /* LabelsSelect */ = {
 			isa = PBXGroup;
 			children = (
+				EF79198B1F60F55000650BB4 /* tool */,
 				EF7919841F5FCED500650BB4 /* JYLabelsSelect.h */,
 				EF7919851F5FCED500650BB4 /* JYLabelsSelect.m */,
 			);
 			path = LabelsSelect;
 			sourceTree = "<group>";
 		};
-		EF7919871F6017C900650BB4 /* tool */ = {
+		EF79198B1F60F55000650BB4 /* tool */ = {
 			isa = PBXGroup;
 			children = (
-				EF7919881F6017C900650BB4 /* UILabel+SizeToFit.h */,
-				EF7919891F6017C900650BB4 /* UILabel+SizeToFit.m */,
+				EF79198C1F60F55000650BB4 /* UILabel+SizeToFit.h */,
+				EF79198D1F60F55000650BB4 /* UILabel+SizeToFit.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF79198A1F6017C900650BB4 /* UILabel+SizeToFit.m in Sources */,
+				EF79198E1F60F55000650BB4 /* UILabel+SizeToFit.m in Sources */,
 				EF7919861F5FCED500650BB4 /* JYLabelsSelect.m in Sources */,
 				EF7919741F5FC5EA00650BB4 /* ViewController.m in Sources */,
 				EF7919711F5FC5EA00650BB4 /* AppDelegate.m in Sources */,
@@ -342,6 +342,7 @@
 				EF7919821F5FC5EA00650BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
