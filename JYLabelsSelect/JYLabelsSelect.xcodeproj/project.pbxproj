@@ -15,6 +15,7 @@
 		EF79197C1F5FC5EA00650BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF79197A1F5FC5EA00650BB4 /* LaunchScreen.storyboard */; };
 		EF7919861F5FCED500650BB4 /* JYLabelsSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7919851F5FCED500650BB4 /* JYLabelsSelect.m */; };
 		EF79198E1F60F55000650BB4 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = EF79198D1F60F55000650BB4 /* UILabel+SizeToFit.m */; };
+		EF963FAC1F662E7000A77A0E /* fire@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF963FAB1F662E7000A77A0E /* fire@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EF7919851F5FCED500650BB4 /* JYLabelsSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLabelsSelect.m; sourceTree = "<group>"; };
 		EF79198C1F60F55000650BB4 /* UILabel+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeToFit.h"; sourceTree = "<group>"; };
 		EF79198D1F60F55000650BB4 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
+		EF963FAB1F662E7000A77A0E /* fire@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		EF79196B1F5FC5EA00650BB4 /* JYLabelsSelect */ = {
 			isa = PBXGroup;
 			children = (
+				EF963FAB1F662E7000A77A0E /* fire@3x.png */,
 				EF7919831F5FCED500650BB4 /* LabelsSelect */,
 				EF79196F1F5FC5EA00650BB4 /* AppDelegate.h */,
 				EF7919701F5FC5EA00650BB4 /* AppDelegate.m */,
@@ -167,6 +170,7 @@
 				EF79197C1F5FC5EA00650BB4 /* LaunchScreen.storyboard in Resources */,
 				EF7919791F5FC5EA00650BB4 /* Assets.xcassets in Resources */,
 				EF7919771F5FC5EA00650BB4 /* Main.storyboard in Resources */,
+				EF963FAC1F662E7000A77A0E /* fire@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

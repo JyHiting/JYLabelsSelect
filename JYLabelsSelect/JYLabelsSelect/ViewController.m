@@ -29,6 +29,7 @@
     _menuArr = [NSMutableArray array];
     for (int index = 0; index < [titleArr count]; index ++ ) {
         
+        //只要是继承自UIView的类初始化长宽之后放到dataSource里即可
         UILabel *menuLabel = [UILabel new];
         menuLabel.textAlignment = NSTextAlignmentCenter;
         menuLabel.backgroundColor = [UIColor brownColor];
@@ -51,6 +52,27 @@
     };
     _labelSelect.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_labelSelect];
+    
+    
+    NSMutableArray *imageArr = [NSMutableArray array];
+    for (int index = 0; index < [titleArr count]; index ++ ) {
+        
+        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 35, 30)];
+        [image setImage:[UIImage imageNamed:@"fire"]];
+        [imageArr addObject:image];
+    }
+    JYLabelsSelect *imageLabelSelect = [[JYLabelsSelect alloc] initWith:CGPointMake(0, _labelSelect.frame.origin.y + _labelSelect.frame.size.height + 20) width:self.view.bounds.size.width];
+    imageLabelSelect.dataSource = imageArr;
+    imageLabelSelect.minRowSpace = 5;
+    imageLabelSelect.minMarginSpace = UIEdgeInsetsMake(5, 5, 5, 5);
+    imageLabelSelect.selected = ^(id selectedObject, NSInteger index) {
+        
+        NSLog(@"_______%@",selectedObject);
+    };
+    imageLabelSelect.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:imageLabelSelect];
+    
+    
     
     
     UIButton *addBt = [UIButton buttonWithType:UIButtonTypeCustom];
