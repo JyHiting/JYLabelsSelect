@@ -75,24 +75,40 @@
                     obj.frame = CGRectMake(previousObj.frame.origin.x + previousObj.bounds.size.width + newColumnSpace, rowElementY,obj.bounds.size.width, obj.bounds.size.height);
                 }
                 previousObj = obj;
+
+                if (idx == ([rowElementArr count] - 1)) {
+                    rowElementY += rowMaxObjHeight + _RowSpace;
+                    rowElementX = _MarginSpace.left;
+                }
             }];
-            
+
             [rowElementArr removeAllObjects];
+
             //换行(每行第一个元素)
-            rowElementY += rowMaxObjHeight + _RowSpace;
-            rowElementX = _MarginSpace.left;
             if (obj.bounds.size.width >= (selfWidth - _MarginSpace.left - _MarginSpace.right)) {
-                CGRect tempRect = obj.frame;
-                obj.frame = CGRectMake(tempRect.origin.x, tempRect.origin.y, selfWidth - _MarginSpace.left - _MarginSpace.right, tempRect.size.height);
+                obj.frame = CGRectMake(rowElementX, rowElementY, selfWidth - rowElementX - _MarginSpace.right, obj.bounds.size.height);
+                rowElementY += obj.bounds.size.height + _RowSpace;
+                rowElementX = _MarginSpace.left;
+            }else{
+            
+                obj.frame = CGRectMake(rowElementX, rowElementY, obj.bounds.size.width, obj.bounds.size.height);
+                rowElementX = rowElementX + obj.bounds.size.width + _ColumnSpace;
+                [rowElementArr addObject:obj];
             }
+            
+        }else{
+        
+            obj.frame = CGRectMake(rowElementX, rowElementY, obj.bounds.size.width, obj.bounds.size.height);
+            rowElementX += obj.bounds.size.width + _ColumnSpace;
+            [rowElementArr addObject:obj];
+
         }
-        
-        obj.frame = CGRectMake(rowElementX, rowElementY, obj.bounds.size.width, obj.bounds.size.height);
-        rowElementX = rowElementX + obj.bounds.size.width + _ColumnSpace;
-        [weakSelf addSubview:obj];
-        [rowElementArr addObject:obj];
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            obj.alpha = 1;
+        }];
         previousObj = obj;
-        
+        [weakSelf addSubview:obj];
         if (idx == ([self.labelsArr count] - 1)) {
             __block CGFloat rowMaxObjHeight = 0;
             [rowElementArr enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -148,6 +164,10 @@
 -(void)addLabels:(NSArray<UIView *>*)addArr{
     
     if ([addArr count] != 0) {
+        [addArr enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            obj.alpha = 0;
+        }];
         [_labelsArr addObjectsFromArray:addArr];
         [self reRefreshLabelsWith:self.frame];
     }
