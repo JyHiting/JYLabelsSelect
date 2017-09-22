@@ -64,4 +64,6 @@
  */
 -(void)deleteLabels:(NSArray<UIView *>*)deleteArr;
 
+-(void)setSelectedLabel:(NSUInteger)index;
+
 @end

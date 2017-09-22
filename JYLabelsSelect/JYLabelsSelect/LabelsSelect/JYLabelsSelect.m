@@ -207,4 +207,15 @@
     }
 }
 
+-(void)setSelectedLabel:(NSUInteger)index{
+    
+    if ([self.currentShowLabels count] != 0) {
+        if (index <= ([self.currentShowLabels count] - 1)) {
+            if (self.selected) {
+                self.selected([self.currentShowLabels objectAtIndex:index],index);
+            }
+        }
+    }
+}
+
 @end
