@@ -46,9 +46,15 @@
     _labelSelect.dataSource = _menuArr;
     _labelSelect.minRowSpace = 5;
     _labelSelect.minMarginSpace = UIEdgeInsetsMake(5, 5, 5, 5);
-    _labelSelect.selected = ^(id selectedObject, NSInteger index) {
-       
-        NSLog(@"_______%@",selectedObject);
+    _labelSelect.selected = ^(UILabel *selectedObject, NSInteger index) {
+        CAKeyframeAnimation *animaion = [CAKeyframeAnimation animation];
+        animaion.keyPath = @"transform.rotation";
+        animaion.values = @[@(-10 / 180.0 * M_PI),@(10 /180.0 * M_PI),@(-10/ 180.0 * M_PI)];
+        animaion.removedOnCompletion = NO;
+        animaion.fillMode = kCAFillModeForwards;
+        animaion.duration = 0.3;
+        animaion.repeatCount = MAXFLOAT;
+        [selectedObject.layer addAnimation:animaion forKey:nil];
     };
     _labelSelect.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_labelSelect];
@@ -88,7 +94,18 @@
     [deleteBt addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
     [deleteBt setTitle:@"delete" forState:UIControlStateNormal];
     [self.view addSubview:deleteBt];
+    
+    UIButton *selectClickBt = [UIButton buttonWithType:UIButtonTypeCustom];
+    selectClickBt.backgroundColor = [UIColor grayColor];
+    selectClickBt.frame = CGRectMake(self.view.bounds.size.width/2 - 80, imageLabelSelect.frame.origin.y + imageLabelSelect.bounds.size.height + 10, 160, 30);
+    [selectClickBt addTarget:self action:@selector(selectClick) forControlEvents:UIControlEventTouchUpInside];
+    [selectClickBt setTitle:@"主动选择第5个" forState:UIControlStateNormal];
+    [self.view addSubview:selectClickBt];
+}
 
+-(void)selectClick{
+    
+    [_labelSelect setSelectedLabel:5];
 }
 
 -(void)addClick{

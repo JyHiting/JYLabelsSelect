@@ -64,6 +64,11 @@
  */
 -(void)deleteLabels:(NSArray<UIView *>*)deleteArr;
 
+/**
+ 主动设置标签数组中的某一项为选中
+
+ @param index 选中的标签索引
+ */
 -(void)setSelectedLabel:(NSUInteger)index;
 
 @end
