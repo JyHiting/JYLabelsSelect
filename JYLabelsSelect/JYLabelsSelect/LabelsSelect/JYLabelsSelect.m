@@ -150,7 +150,7 @@
 -(void)setDataSource:(NSArray *)dataSource{
     
     if ([dataSource count] != 0) {
-        
+        [_labelsArr removeAllObjects];
         [_labelsArr addObjectsFromArray:dataSource];
         [self reRefreshLabelsWith:self.frame];
     }
